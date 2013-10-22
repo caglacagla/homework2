@@ -1,0 +1,32 @@
+#include <stdio.h>/*printf ve scanf fonksiyonlari icin kutuphane*/
+#include<stdlib.h>/*system pause icin kutuphane*/
+void main()
+{
+int sayi;
+int binler,yuzler,onlar,birler;
+printf("4 Basamakli bir Sayi giriniz :");
+scanf("%d",&sayi);
+if(sayi>=1000 && sayi<=9999)/*sayinin 4 basamakli olmasini yani 9999 ile 1000 arasinda olmasi sartini koydum*/
+{
+	printf("\n");
+binler=(sayi/1000);    /*binler basamaginda ki sayiyi bulmak icin sayiyi bine boldum*/
+sayi=sayi-(binler*1000);/*artık elimde ki sayi 4 basamakli degil uc basamakli olmalı ki isleme devam edebileyim*/
+printf("%d tane binlik sayi.\n",binler);/*binler basamaginda ki sayiyi yazdirdim*/
+printf("\n");
+yuzler=sayi/100;      /*yüzler basamagindaki  sayiyi bulmak icin sayiyi bine boldum*/
+sayi=sayi-(yuzler*100); /*artık elimde ki sayi 3 basamakli degil 2 basamakli olmalı ki isleme devam edebileyim*/
+printf("%d tane yuzluk sayi.\n",yuzler);
+printf("\n");
+onlar=sayi/10;     
+sayi=sayi-(onlar*10);
+printf("%d tane onluk sayi.\n",onlar);
+printf("\n");
+birler=sayi;
+printf("%d tene birlik sayi.\n",birler);
+printf("\n");
+}
+else/*girilen sayi dört basamakli degilse asagıda ki ifadeyi yazdirdim*/
+printf("Girdigin Sayinin 4 basamakli olduguna emin misin ? --->  :) \n");
+system("PAUSE");   
+}
+
